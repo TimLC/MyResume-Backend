@@ -18,7 +18,6 @@ public class UserController {
     @GetMapping
     public User getUser() {
         int id = 1;
-        Long l = new Long(id);
-        return userDAO.findById(id).get();
+        return userDAO.findById(Long.valueOf(id)).get();
     }
 }

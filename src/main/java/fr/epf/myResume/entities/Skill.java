@@ -1,19 +1,19 @@
 package fr.epf.myResume.entities;
 
 public class Skill {
-    int id;
-    String skill_name;
+    private Long id;
+    private String skill_name;
 
-    public Skill(int id, String skill_name) {
+    public Skill(Long id, String skill_name) {
         this.id = id;
         this.skill_name = skill_name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

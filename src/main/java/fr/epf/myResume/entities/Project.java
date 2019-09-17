@@ -1,14 +1,14 @@
 package fr.epf.myResume.entities;
 
 public class Project {
-    int id;
-    String project_name;
-    String begin_date;
-    String end_date;
-    String description;
-    String git_link;
+    private Long id;
+    private String project_name;
+    private String begin_date;
+    private String end_date;
+    private String description;
+    private String git_link;
 
-    public Project(int id, String project_name, String begin_date, String end_date, String description, String git_link) {
+    public Project(Long id, String project_name, String begin_date, String end_date, String description, String git_link) {
         this.id = id;
         this.project_name = project_name;
         this.begin_date = begin_date;
@@ -17,11 +17,11 @@ public class Project {
         this.git_link = git_link;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

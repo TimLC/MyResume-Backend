@@ -1,14 +1,14 @@
 package fr.epf.myResume.entities;
 
 public class User {
-    int id;
-    String username;
-    String full_name;
-    String job_title;
-    String id_github;
-    String password;
+    private Long id;
+    private String username;
+    private String full_name;
+    private String job_title;
+    private String id_github;
+    private String password;
 
-    public User(int id, String username, String full_name, String job_title, String id_github, String password) {
+    public User(Long id, String username, String full_name, String job_title, String id_github, String password) {
         this.id = id;
         this.username = username;
         this.full_name = full_name;
@@ -17,11 +17,11 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

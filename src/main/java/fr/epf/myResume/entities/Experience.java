@@ -1,14 +1,14 @@
 package fr.epf.myResume.entities;
 
 public class Experience {
-    int id;
-    String company;
-    String begin_date;
-    String end_date;
-    String address;
-    String description;
+    private Long id;
+    private String company;
+    private String begin_date;
+    private String end_date;
+    private String address;
+    private String description;
 
-    public Experience(int id, String company, String begin_date, String end_date, String address, String description) {
+    public Experience(Long id, String company, String begin_date, String end_date, String address, String description) {
         this.id = id;
         this.company = company;
         this.begin_date = begin_date;
@@ -17,11 +17,11 @@ public class Experience {
         this.description = description;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

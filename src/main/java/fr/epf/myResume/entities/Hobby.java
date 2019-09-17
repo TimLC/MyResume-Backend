@@ -1,19 +1,19 @@
 package fr.epf.myResume.entities;
 
 public class Hobby {
-    int id;
-    String hobby_name;
+    private Long id;
+    private String hobby_name;
 
-    public Hobby(int id, String hobby_name) {
+    public Hobby(Long id, String hobby_name) {
         this.id = id;
         this.hobby_name = hobby_name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -4,6 +4,8 @@ import fr.epf.myResume.DAO.UserDAO;
 import fr.epf.myResume.entities.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/user")
@@ -19,5 +21,10 @@ public class UserController {
     public User getUser() {
         int id = 1;
         return userDAO.findById(Long.valueOf(id)).get();
+    }
+
+    @PostMapping("/update")
+    public void updateUser(@RequestBody User user) {
+        this.userDAO.save(user);
     }
 }

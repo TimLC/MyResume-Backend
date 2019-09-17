@@ -21,14 +21,19 @@ public class SkillController {
     public List<Skill> getSkills() {
         Iterable<Skill> it = this.skillDAO.findAll();
         List<Skill> skills = new ArrayList<>();
-        it.forEach(e -> skills.add(e));
+        for (Skill e : it) {
+            skills.add(e);
+        }
 
         return skills;
     }
 
     @GetMapping("/{id}")
     public Skill getSkill(@PathVariable Long id) {
-        return this.skillDAO.findById(id).get();
+        if (this.skillDAO.findById(id).isPresent()) {
+            return this.skillDAO.findById(id).get();
+        }
+        return null;
     }
 
     @DeleteMapping("/delete/{id}")
@@ -37,12 +42,12 @@ public class SkillController {
     }
 
     @PostMapping("/add")
-    public void addSkill(@RequestBody Skill project) {
-        this.skillDAO.save(project);
+    public void addSkill(@RequestBody Skill skill) {
+        this.skillDAO.save(skill);
     }
 
     @PostMapping("/update")
-    public void updateSkill(@RequestBody Skill project) {
-        this.skillDAO.save(project);
+    public void updateSkill(@RequestBody Skill skill) {
+        this.skillDAO.save(skill);
     }
 }

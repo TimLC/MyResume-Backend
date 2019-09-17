@@ -23,14 +23,19 @@ public class HobbyController {
     public List<Hobby> getHobbies() {
         Iterable<Hobby> it = this.hobbyDAO.findAll();
         List<Hobby> hobbies = new ArrayList<>();
-        it.forEach(e -> hobbies.add(e));
+        for (Hobby e : it) {
+            hobbies.add(e);
+        }
 
         return hobbies;
     }
 
     @GetMapping("/{id}")
     public Hobby getHobby(@PathVariable Long id) {
-        return this.hobbyDAO.findById(id).get();
+        if (this.hobbyDAO.findById(id).isPresent()) {
+            return this.hobbyDAO.findById(id).get();
+        }
+        return null;
     }
 
     @DeleteMapping("/delete/{id}")

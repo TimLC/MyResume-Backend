@@ -21,14 +21,19 @@ public class ExperienceController {
     public List<Experience> getExperiences() {
         Iterable<Experience> it = this.experienceDAO.findAll();
         List<Experience> experiences = new ArrayList<>();
-        it.forEach(e -> experiences.add(e));
+        for (Experience e : it) {
+            experiences.add(e);
+        }
 
         return experiences;
     }
 
     @GetMapping("/{id}")
     public Experience getExperience(@PathVariable Long id) {
-        return this.experienceDAO.findById(id).get();
+        if (this.experienceDAO.findById(id).isPresent()) {
+            return this.experienceDAO.findById(id).get();
+        }
+        return null;
     }
 
     @DeleteMapping("delete/{id}")

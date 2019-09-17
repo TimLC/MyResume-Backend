@@ -21,14 +21,19 @@ public class ProjectController {
     public List<Project> getProjects() {
         Iterable<Project> it = this.projectDAO.findAll();
         List<Project> projects = new ArrayList<>();
-        it.forEach(e -> projects.add(e));
+        for (Project e : it) {
+            projects.add(e);
+        }
 
         return projects;
     }
 
     @GetMapping("/{id}")
     public Project getProject(@PathVariable Long id) {
-        return this.projectDAO.findById(id).get();
+        if (this.projectDAO.findById(id).isPresent()) {
+            return this.projectDAO.findById(id).get();
+        }
+        return null;
     }
 
     @DeleteMapping("/delete/{id}")

@@ -10,6 +10,7 @@ import java.util.List;
 
 @RequestMapping("/projects")
 @Controller
+@CrossOrigin
 public class ProjectController {
     private final ProjectDAO projectDAO;
 
@@ -46,7 +47,7 @@ public class ProjectController {
         this.projectDAO.save(project);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateProject(@RequestBody Project project) {
         this.projectDAO.save(project);
     }

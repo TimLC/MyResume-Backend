@@ -10,6 +10,7 @@ import java.util.List;
 
 @RequestMapping("/skills")
 @Controller
+@CrossOrigin
 public class SkillController {
     private final SkillDAO skillDAO;
 
@@ -46,7 +47,7 @@ public class SkillController {
         this.skillDAO.save(skill);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateSkill(@RequestBody Skill skill) {
         this.skillDAO.save(skill);
     }

@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/hobbies")
 @Controller
+@CrossOrigin
 public class HobbyController {
     private final HobbyDAO hobbyDAO;
 
@@ -48,7 +49,7 @@ public class HobbyController {
         this.hobbyDAO.save(hobby);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateHobby(@RequestBody Hobby hobby) {
         this.hobbyDAO.save(hobby);
     }

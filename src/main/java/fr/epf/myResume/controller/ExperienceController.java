@@ -10,6 +10,7 @@ import java.util.List;
 
 @RequestMapping("/experiences")
 @Controller
+@CrossOrigin
 public class ExperienceController {
     private final ExperienceDAO experienceDAO;
 
@@ -46,7 +47,7 @@ public class ExperienceController {
         this.experienceDAO.save(experience);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateExperience(@RequestBody Experience experience) {
         this.experienceDAO.save(experience);
     }

@@ -45,7 +45,7 @@ public class Experience {
         return endDate;
     }
 
-    public void setEnd_date(String endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

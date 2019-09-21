@@ -2,19 +2,19 @@ package fr.epf.myResume.entities;
 
 public class Project {
     private Long id;
-    private String project_name;
-    private String begin_date;
-    private String end_date;
+    private String projectName;
+    private String beginDate;
+    private String endDate;
     private String description;
-    private String git_link;
+    private String gitLink;
 
-    public Project(Long id, String project_name, String begin_date, String end_date, String description, String git_link) {
+    public Project(Long id, String projectName, String beginDate, String endDate, String description, String gitLink) {
         this.id = id;
-        this.project_name = project_name;
-        this.begin_date = begin_date;
-        this.end_date = end_date;
+        this.projectName = projectName;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
         this.description = description;
-        this.git_link = git_link;
+        this.gitLink = gitLink;
     }
 
     public Long getId() {
@@ -25,28 +25,28 @@ public class Project {
         this.id = id;
     }
 
-    public String getProject_name() {
-        return project_name;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setProject_name(String project_name) {
-        this.project_name = project_name;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
-    public String getBegin_date() {
-        return begin_date;
+    public String getBeginDate() {
+        return beginDate;
     }
 
-    public void setBegin_date(String begin_date) {
-        this.begin_date = begin_date;
+    public void setBeginDate(String beginDate) {
+        this.beginDate = beginDate;
     }
 
-    public String getEnd_date() {
-        return end_date;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public String getDescription() {
@@ -57,11 +57,11 @@ public class Project {
         this.description = description;
     }
 
-    public String getGit_link() {
-        return git_link;
+    public String getGitLink() {
+        return gitLink;
     }
 
-    public void setGit_link(String git_link) {
-        this.git_link = git_link;
+    public void setGitLink(String gitLink) {
+        this.gitLink = gitLink;
     }
 }

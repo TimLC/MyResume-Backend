@@ -3,16 +3,16 @@ package fr.epf.myResume.entities;
 public class Experience {
     private Long id;
     private String company;
-    private String begin_date;
-    private String end_date;
+    private String beginDate;
+    private String endDate;
     private String address;
     private String description;
 
     public Experience(Long id, String company, String begin_date, String end_date, String address, String description) {
         this.id = id;
         this.company = company;
-        this.begin_date = begin_date;
-        this.end_date = end_date;
+        this.beginDate = begin_date;
+        this.endDate = end_date;
         this.address = address;
         this.description = description;
     }
@@ -33,20 +33,20 @@ public class Experience {
         this.company = company;
     }
 
-    public String getBegin_date() {
-        return begin_date;
+    public String getBeginDate() {
+        return beginDate;
     }
 
-    public void setBegin_date(String begin_date) {
-        this.begin_date = begin_date;
+    public void setBeginDate(String begin_date) {
+        this.beginDate = begin_date;
     }
 
-    public String getEnd_date() {
-        return end_date;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
+    public void setEnd_date(String endDate) {
+        this.endDate = endDate;
     }
 
     public String getAddress() {

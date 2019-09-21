@@ -2,11 +2,11 @@ package fr.epf.myResume.entities;
 
 public class Skill {
     private Long id;
-    private String skill_name;
+    private String skillName;
 
     public Skill(Long id, String skill_name) {
         this.id = id;
-        this.skill_name = skill_name;
+        this.skillName = skill_name;
     }
 
     public Long getId() {
@@ -17,11 +17,11 @@ public class Skill {
         this.id = id;
     }
 
-    public String getSkill_name() {
-        return skill_name;
+    public String getSkillName() {
+        return skillName;
     }
 
-    public void setSkill_name(String skill_name) {
-        this.skill_name = skill_name;
+    public void setSkillName(String skill_name) {
+        this.skillName = skill_name;
     }
 }

@@ -2,11 +2,11 @@ package fr.epf.myResume.entities;
 
 public class Hobby {
     private Long id;
-    private String hobby_name;
+    private String hobbyName;
 
     public Hobby(Long id, String hobby_name) {
         this.id = id;
-        this.hobby_name = hobby_name;
+        this.hobbyName = hobby_name;
     }
 
     public Long getId() {
@@ -17,11 +17,11 @@ public class Hobby {
         this.id = id;
     }
 
-    public String getHobby_name() {
-        return hobby_name;
+    public String getHobbyName() {
+        return hobbyName;
     }
 
-    public void setHobby_name(String hobby_name) {
-        this.hobby_name = hobby_name;
+    public void setHobbyName(String hobby_name) {
+        this.hobbyName = hobby_name;
     }
 }

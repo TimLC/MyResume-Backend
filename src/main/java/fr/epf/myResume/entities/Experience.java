@@ -1,11 +1,22 @@
 package fr.epf.myResume.entities;
 
+import javax.persistence.*;
+
+@Entity(name = "experiences")
 public class Experience {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "company")
     private String company;
+    @Column(name = "beginDate")
     private String beginDate;
+    @Column(name = "endDate")
     private String endDate;
+    @Column(name = "address")
     private String address;
+    @Column(name = "description")
     private String description;
 
     public Experience(Long id, String company, String begin_date, String end_date, String address, String description) {
@@ -16,6 +27,8 @@ public class Experience {
         this.address = address;
         this.description = description;
     }
+
+    public Experience() {}
 
     public Long getId() {
         return id;

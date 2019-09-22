@@ -1,11 +1,22 @@
 package fr.epf.myResume.entities;
 
+import javax.persistence.*;
+
+@Entity(name = "projects")
 public class Project {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "projectName")
     private String projectName;
+    @Column(name = "beginDate")
     private String beginDate;
+    @Column(name = "endDate")
     private String endDate;
+    @Column(name = "description")
     private String description;
+    @Column(name = "gitLink")
     private String gitLink;
 
     public Project(Long id, String projectName, String beginDate, String endDate, String description, String gitLink) {
@@ -15,6 +26,9 @@ public class Project {
         this.endDate = endDate;
         this.description = description;
         this.gitLink = gitLink;
+    }
+
+    public Project() {
     }
 
     public Long getId() {

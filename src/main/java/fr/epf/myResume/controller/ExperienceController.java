@@ -2,14 +2,13 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.ExperienceDAO;
 import fr.epf.myResume.entities.Experience;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
 @RequestMapping("/experiences")
-@Controller
 @CrossOrigin
 public class ExperienceController {
     private final ExperienceDAO experienceDAO;

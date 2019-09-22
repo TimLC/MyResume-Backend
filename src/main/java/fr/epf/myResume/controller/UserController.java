@@ -2,12 +2,10 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.UserDAO;
 import fr.epf.myResume.entities.User;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/user")
-@Controller
+@RestController
 @CrossOrigin
 public class UserController {
     private final UserDAO userDAO;

@@ -2,11 +2,10 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.PersonDAO;
 import fr.epf.myResume.entities.Person;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/person")
-@Controller
+@RestController
 @CrossOrigin
 public class PersonController {
     private final PersonDAO personDAO;

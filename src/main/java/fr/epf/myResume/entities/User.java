@@ -2,15 +2,26 @@ package fr.epf.myResume.entities;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.persistence.*;
+
+@Entity(name = "users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
 
     public User(Long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
+    }
+
+    public User() {
     }
 
     public Long getId() {

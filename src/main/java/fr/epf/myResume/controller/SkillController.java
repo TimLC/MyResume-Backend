@@ -2,14 +2,13 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.SkillDAO;
 import fr.epf.myResume.entities.Skill;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/skills")
-@Controller
+@RestController
 @CrossOrigin
 public class SkillController {
     private final SkillDAO skillDAO;

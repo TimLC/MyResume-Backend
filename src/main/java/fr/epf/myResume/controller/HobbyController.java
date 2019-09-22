@@ -2,16 +2,13 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.HobbyDAO;
 import fr.epf.myResume.entities.Hobby;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @RequestMapping("/hobbies")
-@Controller
+@RestController
 @CrossOrigin
 public class HobbyController {
     private final HobbyDAO hobbyDAO;

@@ -42,8 +42,9 @@ public class ExperienceController {
     }
 
     @PostMapping("/add")
-    public void addExperience(@RequestBody Experience experience) {
+    public Experience addExperience(@RequestBody Experience experience) {
         this.experienceDAO.save(experience);
+        return this.experienceDAO.findTopByOrOrderByIdDesc();
     }
 
     @PutMapping("/update")

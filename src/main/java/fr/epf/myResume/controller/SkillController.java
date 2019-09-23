@@ -42,8 +42,9 @@ public class SkillController {
     }
 
     @PostMapping("/add")
-    public void addSkill(@RequestBody Skill skill) {
+    public Skill addSkill(@RequestBody Skill skill) {
         this.skillDAO.save(skill);
+        return this.skillDAO.findTopByOrOrderByIdDesc();
     }
 
     @PutMapping("/update")

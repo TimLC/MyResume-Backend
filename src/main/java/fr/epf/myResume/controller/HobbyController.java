@@ -42,8 +42,9 @@ public class HobbyController {
     }
 
     @PostMapping("/add")
-    public void addHobby(@RequestBody Hobby hobby) {
+    public Hobby addHobby(@RequestBody Hobby hobby) {
         this.hobbyDAO.save(hobby);
+        return this.hobbyDAO.findTopByOrOrderByIdDesc();
     }
 
     @PutMapping("/update")

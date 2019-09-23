@@ -42,8 +42,9 @@ public class ProjectController {
     }
 
     @PostMapping("/add")
-    public void addProject(@RequestBody Project project) {
+    public Project addProject(@RequestBody Project project) {
         this.projectDAO.save(project);
+        return this.projectDAO.findTopByOrOrderByIdDesc();
     }
 
     @PutMapping("/update")

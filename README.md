@@ -1,13 +1,17 @@
-# Training Spring Boot
+My Resume - Api REST
 =====
 
-1. Cloner le projet en utilisant la commande `git clone https://github.com/resourcepool/formation-spring-boot`
+1. Clone the project using `git clone https://github.com/resourcepool/https://github.com/TimLC/MyResume-Backend.git`
 
-2. Importer le projet dans IntelliJ IDEA en important le fichier "pom.xml" à la racine de ce repository.
-
-3. Exécuter votre DB mysql. Si vous avez docker, vous pouvez utiliser la commande suivante:
+2. Execute the following command with docker at the base of your repository to launch the DB:
 ```
 docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=defaultdb -p 3306:3306 -v "`pwd`/initdb:/docker-entrypoint-initdb.d" mariadb
 ```
 
-4. Tous les scripts sql contenus dans le dossier initdb seront exécutés automatiquement lors du premier chargement de la DB.
+3. All SQL scripts will be executed at the launch of the DB and will fill it.
+
+4. Launch the application to launch the API.
+
+5. Congratulations, you can now use the API.
+
+6. To access the documentation with Swagger, go to: `localhost:8080//swagger-ui.html`

@@ -18,14 +18,16 @@ public class Person {
     private String phoneNumber;
     @Column(name = "emailAddress")
     private String emailAddress;
+    @Column(name = "linkedInLink")
+    private String linkedInLink;
 
-    public Person(Long id, String fullName, String jobTitle, String idGithub, String phoneNumber, String emailAddress) {
-        this.id = id;
+    public Person(String fullName, String jobTitle, String idGithub, String phoneNumber, String emailAddress, String linkedInLink) {
         this.fullName = fullName;
         this.jobTitle = jobTitle;
         this.idGithub = idGithub;
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
+        this.linkedInLink = linkedInLink;
     }
 
     public Person() {
@@ -77,5 +79,13 @@ public class Person {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public String getLinkedInLink() {
+        return linkedInLink;
+    }
+
+    public void setLinkedInLink(String linkedInLink) {
+        this.linkedInLink = linkedInLink;
     }
 }

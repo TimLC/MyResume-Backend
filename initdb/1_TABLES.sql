@@ -7,7 +7,8 @@ create table persons
     `jobTitle` TEXT not null,
     `idGithub` TEXT not null,
     `phoneNumber` TEXT not null,
-    `emailAddress` TEXT not null
+    `emailAddress` TEXT not null,
+    `linkedInLink` TEXT not null
 );
 create table users
 (

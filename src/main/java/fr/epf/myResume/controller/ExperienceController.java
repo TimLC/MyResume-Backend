@@ -50,8 +50,7 @@ public class ExperienceController {
     @ApiOperation(value = "Add an experience and return it")
     @PostMapping("/add")
     public Experience addExperience(@RequestBody Experience experience) {
-        this.experienceDAO.save(experience);
-        return this.experienceDAO.findTopByOrderByIdDesc();
+        return this.experienceDAO.save(experience);
     }
 
     @ApiOperation(value = "Update an experience from its object")

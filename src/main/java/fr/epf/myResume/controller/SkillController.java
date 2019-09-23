@@ -50,8 +50,7 @@ public class SkillController {
     @ApiOperation(value = "Add a skill and return it")
     @PostMapping("/add")
     public Skill addSkill(@RequestBody Skill skill) {
-        this.skillDAO.save(skill);
-        return this.skillDAO.findTopByOrderByIdDesc();
+        return this.skillDAO.save(skill);
     }
 
     @ApiOperation(value = "Update a skill from its object")

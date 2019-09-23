@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ExperienceDAO extends CrudRepository<Experience, Long> {
-    public Experience findTopByOrderByIdDesc();
 }

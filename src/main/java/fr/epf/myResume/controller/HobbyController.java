@@ -50,8 +50,7 @@ public class HobbyController {
     @ApiOperation(value = "Add a hobby and return it")
     @PostMapping("/add")
     public Hobby addHobby(@RequestBody Hobby hobby) {
-        this.hobbyDAO.save(hobby);
-        return this.hobbyDAO.findTopByOrderByIdDesc();
+        return this.hobbyDAO.save(hobby);
     }
 
     @ApiOperation(value = "Update a hobby from its object")

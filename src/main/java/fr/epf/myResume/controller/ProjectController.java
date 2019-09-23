@@ -50,8 +50,7 @@ public class ProjectController {
     @ApiOperation(value = "Add a project and return it.")
     @PostMapping("/add")
     public Project addProject(@RequestBody Project project) {
-        this.projectDAO.save(project);
-        return this.projectDAO.findTopByOrderByIdDesc();
+        return this.projectDAO.save(project);
     }
 
     @ApiOperation(value = "Update a project from its object")

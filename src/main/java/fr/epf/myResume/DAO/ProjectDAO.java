@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProjectDAO extends CrudRepository<Project, Long> {
-    public Project findTopByOrOrderByIdDesc();
+    public Project findTopByOrderByIdDesc();
 }

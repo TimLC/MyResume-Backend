@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HobbyDAO extends CrudRepository<Hobby, Long> {
-    public Hobby findTopByOrOrderByIdDesc();
+    public Hobby findTopByOrderByIdDesc();
 }

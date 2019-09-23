@@ -2,6 +2,8 @@ package fr.epf.myResume.controller;
 
 import fr.epf.myResume.DAO.ExperienceDAO;
 import fr.epf.myResume.entities.Experience;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/experiences")
 @CrossOrigin
+@Api(description="API for operations on experiences.")
 public class ExperienceController {
     private final ExperienceDAO experienceDAO;
 
@@ -17,6 +20,7 @@ public class ExperienceController {
         this.experienceDAO = experienceDAO;
     }
 
+    @ApiOperation(value = "Return all experiences")
     @GetMapping
     public List<Experience> getExperiences() {
         Iterable<Experience> it = this.experienceDAO.findAll();
@@ -28,6 +32,7 @@ public class ExperienceController {
         return experiences;
     }
 
+    @ApiOperation(value = "Return an experience from its id")
     @GetMapping("/{id}")
     public Experience getExperience(@PathVariable Long id) {
         if (this.experienceDAO.findById(id).isPresent()) {
@@ -36,17 +41,20 @@ public class ExperienceController {
         return null;
     }
 
+    @ApiOperation(value = "Delete an experience from its id")
     @DeleteMapping("delete/{id}")
     public void deleteExperience(@PathVariable Long id) {
         this.experienceDAO.deleteById(id);
     }
 
+    @ApiOperation(value = "Add an experience and return it")
     @PostMapping("/add")
     public Experience addExperience(@RequestBody Experience experience) {
         this.experienceDAO.save(experience);
-        return this.experienceDAO.findTopByOrOrderByIdDesc();
+        return this.experienceDAO.findTopByOrderByIdDesc();
     }
 
+    @ApiOperation(value = "Update an experience from its object")
     @PutMapping("/update")
     public void updateExperience(@RequestBody Experience experience) {
         this.experienceDAO.save(experience);

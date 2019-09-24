@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/experiences")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 @Api(description="API for operations on experiences.")
 public class ExperienceController {
     private final ExperienceDAO experienceDAO;

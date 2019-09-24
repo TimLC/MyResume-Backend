@@ -22,4 +22,4 @@ docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=def
 
 6. Congratulations, you can now use the API.
 
-7. To access the documentation with Swagger, go to: `localhost:8080//swagger-ui.html`
+7. To access the documentation with Swagger, go to: `localhost:8080/swagger-ui.html`

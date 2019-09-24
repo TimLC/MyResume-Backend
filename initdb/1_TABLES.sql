@@ -54,4 +54,14 @@ create table projects
     description TEXT not null,
     `gitLink` TEXT not null
 );
+create table messages
+(
+    id bigint auto_increment,
+    constraint projects_pk
+        primary key (id),
+    `contactName` TEXT not null,
+    `contactEmail` TEXT not null,
+    subject TEXT not null,
+    message TEXT not null
+);
 

@@ -7,3 +7,5 @@ INSERT INTO defaultdb.hobbies (id, hobbyName) VALUES (1, 'Reading');
 INSERT INTO defaultdb.hobbies (id, hobbyName) VALUES (2, 'Cooking');
 INSERT INTO defaultdb.projects (id, projectName, beginDate, endDate, description, gitLink) VALUES (1, 'DogsAI', '16/09/2019', '17/09/2019', 'des chiens', 'httpjkdv,s');
 INSERT INTO defaultdb.projects (id, projectName, beginDate, endDate, description, gitLink) VALUES (2, 'WagnerAI', '16/09/2019', '17/09/2019', 'des musique', 'httpjkdv,s');
+INSERT INTO defaultdb.messages (id, contactName, contactEmail, subject, message) VALUES (1, 'Timothe', 'tim@epf.fr', 'Recrutement', 'Je te veux dans MON équipe');
+INSERT INTO defaultdb.messages (id, contactName, contactEmail, subject, message) VALUES (2, 'Google', 'google@epf.fr', 'RecrutementGoogle', 'Salut');

@@ -42,7 +42,7 @@ public class ExperienceController {
     }
 
     @ApiOperation(value = "Delete an experience from its id")
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteExperience(@PathVariable Long id) {
         this.experienceDAO.deleteById(id);
     }
